@@ -4,6 +4,7 @@
 <ul>
 <% @books.each do |book| %>
   <li><%= book.title %></li>
+  <%= link_to 'X', book_path(book), method: :delete %>
 <% end %>
 </ul>
 
