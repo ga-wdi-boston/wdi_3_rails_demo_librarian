@@ -9,6 +9,7 @@ class LibrariesController < ApplicationController
 
   def show
     @library = Library.find(params[:id])
+    @book = Book.new(library_id: @library.id)
     @books = @library.books
   end
 end

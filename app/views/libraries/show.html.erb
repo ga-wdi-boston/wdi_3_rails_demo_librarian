@@ -1,9 +1,15 @@
 <h1><%= @library.name %></h1>
 
-
 <h2>All our books!</h2>
 <ul>
 <% @books.each do |book| %>
   <li><%= book.title %></li>
 <% end %>
 </ul>
+
+This submits to POST /books
+<%= form_for(@book) do |f| %>
+  <%= f.hidden_field :library_id %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
