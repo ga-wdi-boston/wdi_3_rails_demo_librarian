@@ -7,9 +7,6 @@
 <% end %>
 </ul>
 
-This submits to POST /books
-<%= form_for(@book) do |f| %>
-  <%= f.hidden_field :library_id %>
-  <%= f.text_field :title %>
-  <%= f.submit %>
-<% end %>
+<%= link_to "New Book", new_book_path(library_id: '1') %>
+
+<%= render 'books/form' %>
