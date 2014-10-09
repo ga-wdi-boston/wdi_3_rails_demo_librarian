@@ -5,7 +5,6 @@
 class LibrariesController < ApplicationController
   def index
     @libraries = Library.all
-    # render(*args)
   end
 
   def show
